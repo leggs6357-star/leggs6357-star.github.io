@@ -5,36 +5,52 @@
     <title>Beranda</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        /* ===== PENGATURAN DASAR ===== */
-        body {
-            background-color: #dbeafe;
-            background-image: url("cipik.jpg");
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            font-family: "Segoe UI", Arial, sans-serif;
-            color: #1e293b;
-            margin: 0;
-        }
-        /* HEADER WEBSITE */
+       ```css
+/* ===== PENGATURAN DASAR ===== */
+body {
+    background-color: #dbeafe;
+    background-image: none;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+}
+
+/* ===== TABEL UTAMA ===== */
+body > table {
+    width: 800px;
+    max-width: 95%;
+    margin: 30px auto;
+    border: 1px solid #bfdbfe;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 12px 35px rgba(15, 64, 120, 0.25);
+}
+
+/* ===== HEADER WEBSITE ===== */
 body > table > tbody > tr:first-child td {
     background-color: #0879c9;
     background-image:
         linear-gradient(
-            rgba(0, 105, 200, 0.55),
-            rgba(0, 65, 160, 0.65)
+            rgba(0, 75, 180, 0.30),
+            rgba(0, 50, 140, 0.45)
         ),
-        url("images/header.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
+        url("images/header.jpg") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    height: 210px;
     padding: 25px 15px;
+    text-align: center;
+    color: white;
     border-bottom: 4px solid #38bdf8;
 }
 
-/* JUDUL WEBSITE LINGGA */
+/* ===== JUDUL WEBSITE LINGGA ===== */
 h1 {
     color: white;
     font-family: Arial, sans-serif;
@@ -42,223 +58,186 @@ h1 {
     font-weight: bold;
     letter-spacing: 2px;
     text-shadow:
-        3px 3px 0 #0753a5,
-        5px 5px 0 #063b7a,
-        7px 8px 12px rgba(0, 0, 0, 0.65);
+        2px 2px 0 #0753a5,
+        4px 4px 0 #063b7a,
+        6px 7px 10px rgba(0, 0, 0, 0.85);
 }
 
+/* ===== SLOGAN WEBSITE ===== */
+h1 + p {
+    color: white;
+    font-size: 17px;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.9);
+}
 
-        /* ===== TABEL UTAMA ===== */
-        body > table {
-            width: 800px;
-            max-width: 95%;
-            margin: 30px auto;
-            border: 1px solid #bfdbfe;
-            border-collapse: separate;
-            border-spacing: 0;
-            border-radius: 16px;
-            overflow: hidden;
-            background-color: #ffffff;
-            box-shadow: 0 12px 35px rgba(15, 64, 120, 0.25);
-        }
+/* ===== MENU NAVIGASI ===== */
+body > table > tbody > tr:nth-child(2) td {
+    background-color: #dbeafe;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #93c5fd;
+}
 
-        /* ===== HEADER WEBSITE ===== */
-        body > table > tbody > tr:first-child td {
-            background-color: #075985;
-            background-image:
-                linear-gradient(135deg,
-                rgba(30, 64, 175, 0.92),
-                rgba(8, 145, 178, 0.85)),
-                url("images/jaring-teal.svg");
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+body > table > tbody > tr:nth-child(2) a {
+    display: inline-block;
+    padding: 9px 12px;
+    margin: 3px;
+    border-radius: 8px;
+    color: #1d4ed8;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
-        h1 {
-            font-size: 38px;
-            letter-spacing: 2px;
-            margin: 10px 0;
-            text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.25);
-        }
+/* EFEK HOVER MENU */
+body > table > tbody > tr:nth-child(2) a:hover {
+    background-color: #2563eb;
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transform: translateY(-2px);
+}
 
-        h1 + p {
-            font-size: 15px;
-            letter-spacing: 1px;
-            color: #e0f2fe;
-        }
+/* ===== KONTEN UTAMA ===== */
+body > table > tbody > tr:nth-child(3) td:first-child {
+    padding: 25px;
+    line-height: 1.8;
+    vertical-align: top;
+    background-color: #ffffff;
+}
 
-        /* ===== MENU NAVIGASI ===== */
-        body > table > tbody > tr:nth-child(2) td {
-            background-color: #dbeafe;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 2px solid #93c5fd;
-        }
+h3 {
+    color: #1d4ed8;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    padding-left: 12px;
+    border-left: 5px solid #06b6d4;
+}
 
-        a {
-            color: #075985;
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+/* ===== PARAGRAF ===== */
+p {
+    font-size: 15px;
+}
 
-        body > table > tbody > tr:nth-child(2) a {
-            display: inline-block;
-            padding: 9px 12px;
-            margin: 3px;
-            border-radius: 8px;
-            color: #1d4ed8;
-            transition: all 0.3s ease;
-        }
+/* ===== TANGGAL BERITA ===== */
+h3 + p[align="right"] {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 0;
+}
 
-        body > table > tbody > tr:nth-child(2) a:hover {
-            background-color: #2563eb;
-            color: white;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-            transform: translateY(-2px);
-        }
+/* ===== GARIS PEMISAH BERITA ===== */
+hr {
+    border: none;
+    height: 2px;
+    margin: 28px 0;
+    background: linear-gradient(
+        to right,
+        #2563eb,
+        #67e8f9,
+        transparent
+    );
+}
 
-        a:hover {
-            color: #0891b2;
-            text-decoration: underline;
-        }
+/* ===== TOMBOL SELANJUTNYA ===== */
+a[href^="berita/"] {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #2563eb, #0891b2);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    transition: all 0.3s ease;
+}
 
-        /* ===== KONTEN UTAMA ===== */
-        body > table > tbody > tr:nth-child(3) td:first-child {
-            padding: 25px;
-            line-height: 1.8;
-            vertical-align: top;
-            background-color: #ffffff;
-        }
+a[href^="berita/"]:hover {
+    background: linear-gradient(135deg, #1e40af, #0e7490);
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(37, 99, 235, 0.3);
+}
 
-        h3 {
-            color: #1d4ed8;
-            font-size: 22px;
-            margin-top: 10px;
-            margin-bottom: 12px;
-            padding-left: 12px;
-            border-left: 5px solid #06b6d4;
-        }
+/* ===== SIDEBAR TAUTAN EKSTERNAL ===== */
+body > table > tbody > tr:nth-child(3) td:last-child {
+    background-color: #eff6ff;
+    padding: 20px;
+    vertical-align: top;
+    border-left: 1px solid #bfdbfe;
+}
 
-        p {
-            font-size: 15px;
-        }
+body > table > tbody > tr:nth-child(3) td:last-child p {
+    color: #1e40af;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 2px solid #60a5fa;
+    padding-bottom: 10px;
+}
 
-        /* ===== TANGGAL BERITA ===== */
-        h3 + p[align="right"] {
-            color: #64748b;
-            font-size: 13px;
-            margin-top: 0;
-        }
+/* ===== DAFTAR TAUTAN ===== */
+ol {
+    padding-left: 22px;
+}
 
-        /* ===== GARIS PEMISAH ===== */
-        hr {
-            border: none;
-            height: 2px;
-            margin: 28px 0;
-            background: linear-gradient(
-                to right,
-                #2563eb,
-                #67e8f9,
-                transparent
-            );
-        }
+ol li {
+    padding: 8px 0;
+    color: #2563eb;
+}
 
-        /* ===== LINK SELANJUTNYA ===== */
-        a[href^="berita/"] {
-            display: inline-block;
-            padding: 9px 18px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #2563eb, #0891b2);
-            color: white;
-            font-size: 14px;
-            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
-            transition: all 0.3s ease;
-        }
+ol li a {
+    color: #075985;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
 
-        a[href^="berita/"]:hover {
-            background: linear-gradient(135deg, #1e40af, #0e7490);
-            color: white;
-            text-decoration: none;
-            transform: translateY(-2px);
-            box-shadow: 0 7px 16px rgba(37, 99, 235, 0.3);
-        }
+ol li a:hover {
+    color: #0891b2;
+}
 
-        /* ===== SIDEBAR TAUTAN EKSTERNAL ===== */
-        body > table > tbody > tr:nth-child(3) td:last-child {
-            background-color: #eff6ff;
-            padding: 20px;
-            vertical-align: top;
-            border-left: 1px solid #bfdbfe;
-        }
+/* ===== FOOTER ===== */
+body > table > tbody > tr:last-child td {
+    background-color: #0f172a;
+    background-image: linear-gradient(
+        90deg,
+        #0f172a,
+        #1e3a8a
+    );
+    color: #e0f2fe;
+    padding: 18px;
+    border-top: 3px solid #06b6d4;
+}
 
-        body > table > tbody > tr:nth-child(3) td:last-child p {
-            color: #1e40af;
-            font-weight: bold;
-            font-size: 16px;
-            border-bottom: 2px solid #60a5fa;
-            padding-bottom: 10px;
-        }
+/* ===== RESPONSIF UNTUK HP ===== */
+@media screen and (max-width: 600px) {
+    body > table {
+        width: 95%;
+        margin: 15px auto;
+    }
 
-        ol {
-            padding-left: 22px;
-        }
+    body > table > tbody > tr:nth-child(3) td:first-child,
+    body > table > tbody > tr:nth-child(3) td:last-child {
+        padding: 15px;
+    }
 
-        ol li {
-            padding: 8px 0;
-            color: #2563eb;
-        }
+    h1 {
+        font-size: 30px;
+    }
 
-        ol li a {
-            font-size: 14px;
-            overflow-wrap: anywhere;
-        }
+    h3 {
+        font-size: 19px;
+    }
 
-        ol li a:hover {
-            color: #0891b2;
-        }
-
-        /* ===== FOOTER ===== */
-        body > table > tbody > tr:last-child td {
-            background-color: #0f172a;
-            background-image: linear-gradient(
-                90deg,
-                #0f172a,
-                #1e3a8a
-            );
-            color: #e0f2fe;
-            padding: 18px;
-            border-top: 3px solid #06b6d4;
-        }
-
-        /* ===== TAMPILAN RESPONSIF ===== */
-        @media screen and (max-width: 600px) {
-            body > table {
-                width: 95%;
-                margin: 15px auto;
-            }
-
-            body > table > tbody > tr:nth-child(3) td {
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            h3 {
-                font-size: 19px;
-            }
-
-            body > table > tbody > tr:nth-child(2) a {
-                padding: 7px;
-                font-size: 13px;
-            }
-        }
-```
+    body > table > tbody > tr:nth-child(2) a {
+        padding: 7px;
+        font-size: 13px;
+    }
+}
+```     
     </style>
 </head>
 
