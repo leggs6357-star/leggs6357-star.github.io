@@ -1,0 +1,331 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Beranda</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* ===== PENGATURAN DASAR ===== */
+        body {
+            background-color: #dbeafe;
+            background-image: url("images/background.svg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        /* ===== TABEL UTAMA ===== */
+        body > table {
+            width: 800px;
+            max-width: 95%;
+            margin: 30px auto;
+            border: 1px solid #bfdbfe;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: #ffffff;
+            box-shadow: 0 12px 35px rgba(15, 64, 120, 0.25);
+        }
+
+        /* ===== HEADER WEBSITE ===== */
+        body > table > tbody > tr:first-child td {
+            background-color: #075985;
+            background-image:
+                linear-gradient(135deg,
+                rgba(30, 64, 175, 0.92),
+                rgba(8, 145, 178, 0.85)),
+                url("images/jaring-teal.svg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 38px;
+            letter-spacing: 2px;
+            margin: 10px 0;
+            text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 + p {
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: #e0f2fe;
+        }
+
+        /* ===== MENU NAVIGASI ===== */
+        body > table > tbody > tr:nth-child(2) td {
+            background-color: #dbeafe;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #93c5fd;
+        }
+
+        a {
+            color: #075985;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        body > table > tbody > tr:nth-child(2) a {
+            display: inline-block;
+            padding: 9px 12px;
+            margin: 3px;
+            border-radius: 8px;
+            color: #1d4ed8;
+            transition: all 0.3s ease;
+        }
+
+        body > table > tbody > tr:nth-child(2) a:hover {
+            background-color: #2563eb;
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+            transform: translateY(-2px);
+        }
+
+        a:hover {
+            color: #0891b2;
+            text-decoration: underline;
+        }
+
+        /* ===== KONTEN UTAMA ===== */
+        body > table > tbody > tr:nth-child(3) td:first-child {
+            padding: 25px;
+            line-height: 1.8;
+            vertical-align: top;
+            background-color: #ffffff;
+        }
+
+        h3 {
+            color: #1d4ed8;
+            font-size: 22px;
+            margin-top: 10px;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 5px solid #06b6d4;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        /* ===== TANGGAL BERITA ===== */
+        h3 + p[align="right"] {
+            color: #64748b;
+            font-size: 13px;
+            margin-top: 0;
+        }
+
+        /* ===== GARIS PEMISAH ===== */
+        hr {
+            border: none;
+            height: 2px;
+            margin: 28px 0;
+            background: linear-gradient(
+                to right,
+                #2563eb,
+                #67e8f9,
+                transparent
+            );
+        }
+
+        /* ===== LINK SELANJUTNYA ===== */
+        a[href^="berita/"] {
+            display: inline-block;
+            padding: 9px 18px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #2563eb, #0891b2);
+            color: white;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        a[href^="berita/"]:hover {
+            background: linear-gradient(135deg, #1e40af, #0e7490);
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 16px rgba(37, 99, 235, 0.3);
+        }
+
+        /* ===== SIDEBAR TAUTAN EKSTERNAL ===== */
+        body > table > tbody > tr:nth-child(3) td:last-child {
+            background-color: #eff6ff;
+            padding: 20px;
+            vertical-align: top;
+            border-left: 1px solid #bfdbfe;
+        }
+
+        body > table > tbody > tr:nth-child(3) td:last-child p {
+            color: #1e40af;
+            font-weight: bold;
+            font-size: 16px;
+            border-bottom: 2px solid #60a5fa;
+            padding-bottom: 10px;
+        }
+
+        ol {
+            padding-left: 22px;
+        }
+
+        ol li {
+            padding: 8px 0;
+            color: #2563eb;
+        }
+
+        ol li a {
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        ol li a:hover {
+            color: #0891b2;
+        }
+
+        /* ===== FOOTER ===== */
+        body > table > tbody > tr:last-child td {
+            background-color: #0f172a;
+            background-image: linear-gradient(
+                90deg,
+                #0f172a,
+                #1e3a8a
+            );
+            color: #e0f2fe;
+            padding: 18px;
+            border-top: 3px solid #06b6d4;
+        }
+
+        /* ===== TAMPILAN RESPONSIF ===== */
+        @media screen and (max-width: 600px) {
+            body > table {
+                width: 95%;
+                margin: 15px auto;
+            }
+
+            body > table > tbody > tr:nth-child(3) td {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 19px;
+            }
+
+            body > table > tbody > tr:nth-child(2) a {
+                padding: 7px;
+                font-size: 13px;
+            }
+        }
+```
+    </style>
+</head>
+
+<body bgcolor="darkgrey" background="images/background.svg">
+    <!-- Halaman web tanpa CSS. Murni hanya memakai HTML -->
+    <p>&nbsp;</p>
+
+    <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
+        <tr>
+            <td colspan="2" align="center" bgcolor="teal" background="images/jaring-teal.svg">
+                <font color="white">
+                    <p>&nbsp;</p>
+                    <h1>Website Lingga</h1>
+                    <p><em>Di mana ada Lingga, di situ ada jalan.</em></p>
+                    <p>&nbsp;</p>
+                </font>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" bgcolor="pink">
+                <a href="./">Beranda</a> |
+                <a href="tentang-saya.html">Tentang Saya</a> |
+                <a href="sekolahku.html">Sekolahku</a> |
+                <a href="syair-lagu.html">Syair Lagu</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="75%">
+                <!-- Content utama -->
+
+                <h3>Pembelajaran Jarak Jauh</h3>
+                <p align="right">
+                    <small><em>Senin, 7 September 2026</em></small>
+                </p>
+
+                <p>
+                    Karena adanya abu erupsi anak Gunung Krakatau, maka selama
+                    3 hari ke depan, pembelajaran dilakukan secara jarak jauh.
+                    Pembelajaran dapat memakai Zoom, LMS, WhatsApp, Telegram,
+                    atau media lain yang ditentukan oleh guru.
+                </p>
+
+                <p>
+                    <a href="berita/berita-1.html">Selanjutnya</a>
+                </p>
+
+                <hr>
+
+                <h3>Lomba Pembuatan Video</h3>
+                <p align="right">
+                    <small><em>Jumat, 4 September 2026</em></small>
+                </p>
+
+                <p>
+                    Telah dibuka pendaftaran lomba pembuatan video pendek
+                    tentang pariwisata di Tangerang. Lomba ini bekerja sama
+                    dengan MGMP DKV Kota Tangerang, yang bertujuan untuk
+                    memperkenalkan pariwisata yang ada di Kota Tangerang.
+                </p>
+
+                <p>
+                    <a href="berita/berita-2.html">Selanjutnya</a>
+                </p>
+
+                <!-- Akhir dari content utama -->
+            </td>
+
+            <td width="25%" valign="top" bgcolor="lightgrey">
+                <p>Tautan eksternal</p>
+                <ol>
+                    <li>
+                        <a href="https://www.mawan.or.id">Website Lingga</a>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.wikipedia.org">Wikipedia</a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com">W3Schools</a>
+                    </li>
+                </ol>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="right" bgcolor="black">
+                <font color="white">
+                    <small>&copy; Copyright Lingga, 2026.</small>
+                </font>
+            </td>
+        </tr>
+    </table>
+
+    <p>&nbsp;</p>
+</body>
+</html>
+```
